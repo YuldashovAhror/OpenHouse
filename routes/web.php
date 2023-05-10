@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\WordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/languages/{loc}', function ($loc) {
+    if (in_array($loc, ['en', 'ru', 'uz'])) {
+        session()->put('locale', $loc);
+    }
+    return redirect()->back();
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,5 +27,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('dashboar/words', [WordController::class, 'index'])->name('words.index');
 
 require __DIR__.'/auth.php';
