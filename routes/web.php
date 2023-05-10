@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Dashboard\PartnerController;
+use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\WordController;
+use App\Http\Controllers\Front\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,14 +23,14 @@ Route::get('/languages/{loc}', function ($loc) {
     return redirect()->back();
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('dashboard/plan', PlanController::class);
+Route::resource('dashboard/partner', PartnerController::class);
 Route::get('dashboar/words', [WordController::class, 'index'])->name('words.index');
 
 require __DIR__.'/auth.php';

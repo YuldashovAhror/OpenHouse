@@ -13,7 +13,6 @@
         <div class="preloader__percent">0</div>
         <!-- /.preloader__percent -->
     </div>
-    {{-- @dd('asd'); --}}
     <div class="wrapper">
         <section class="section__main">
             <div class="main">
@@ -179,11 +178,11 @@
                 <div class="commerce__container" data-aos="fade-left" data-aos-duration="500">
                     <div class="swiper commerce__slider ">
                         <div class="swiper-wrapper">
-                            <?php for ($i = 1; $i <= 7; $i++):?>
+                            @foreach ($plans as $plan)
                             <div class="swiper-slide">
                                 <div class="commerce__item">
                                     <div class="commerce__content">
-                                        <h3 class="commerce__name">Kоммерческие помещения
+                                        <h3 class="commerce__name">{{$plan['name_'.$lang]}}
                                         </h3>
                                         <!-- /.prices__name -->
                                         <p class="commerce__description">
@@ -213,7 +212,7 @@
                                 </div>
                                 <!-- /.prices__item -->
                             </div>
-                            <?php endfor ?>
+                            @endforeach
                         </div>
                     </div>
                     <div class="commerce__buttons">

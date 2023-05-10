@@ -29,21 +29,31 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-star"></i>
-                        <span>Dropdown</span>
+                        <span>План</span>
                     </a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false">
-                        <li><a href="ecommerce-products.html">Products</a></li>
-                        <li><a href="ecommerce-product-detail.html">Product Detail</a></li>
-                        <li><a href="ecommerce-orders.html">Orders</a></li>
-                        <li><a href="ecommerce-customers.html">Customers</a></li>
-                        <li><a href="ecommerce-cart.html">Cart</a></li>
-                        <li><a href="ecommerce-checkout.html">Checkout</a></li>
-                        <li><a href="ecommerce-shops.html">Shops</a></li>
-                        <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                        <li><a href="{{route('plan.index')}}">Список</a></li>
+                        <li><a href="{{route('plan.create')}}">Создать</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="uil-star"></i>
+                        <span>Партнеры</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                        <li><a href="{{route('partner.index')}}">Список</a></li>
+                        <li><a href="{{route('partner.create')}}">Создать</a></li>
+                    </ul>
+                </li>
+                {{-- <li>
+                    <a href="{{route('plan.index')}}">
+                        <i class="uil-star"></i>
+                        <span>План</span>
+                    </a>
                 </li> --}}
                 <li>
                     <a href="{{route('words.index')}}">
