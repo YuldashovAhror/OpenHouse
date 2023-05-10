@@ -1,0 +1,859 @@
+@import "basic/fonts";
+
+:root {
+    font-size: 20px;
+    --main-color-white: #FFFFFF;
+    --main-color-black: #1D1D1F;
+    --main-color-grey: #86868B;
+    --main-color-bg: #F5F5F7;
+    --main-color-one: #3D0F1A;
+    --main-color-two: #D0AA48;
+    --main-color-three: #373F5A;
+}
+
+@mixin flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin flexEnd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin svgAuto {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin beforeBlack {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+html {
+    //overflow: hidden;
+    //scroll-behavior: smooth;
+}
+.nicescroll-rails-hr {
+    display: none!important;
+}
+html, body {
+    position: relative;
+    background: var(--main-color-grey3);
+    color: var(--main-color-black);
+    counter-reset: number;
+    //=====================
+    overflow-x: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+a {
+    -webkit-transition: .3s all;
+    transition: .3s all;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+input,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: 0 !important;
+    outline-color: transparent !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+@import "blocks/header";
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color-white);
+    z-index: 9999;
+    @include flexCenter();
+
+    &__logo {
+        position: relative;
+        width: 100%;
+        max-width: 25rem;
+        svg {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__percent {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--main-color-two);
+        font-family: "SFProDisplay-SM";
+        font-size: 4rem;
+    }
+}
+
+.wrapper {
+    min-height: 100vh;
+    .section {
+        &__main {
+            position: relative;
+            padding-bottom: 5rem;
+            .main {
+                &__video {
+                    position: relative;
+                    height: 100vh;
+                    width: 100%;
+                    transition: padding 0.4s ease-out 0s, height 0.3s ease;
+                    overflow: hidden;
+                    margin-bottom: 2rem;
+                    &-container {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transition: .6s all;
+                        overflow: hidden;
+                        //border-radius: 0 0 2.5rem 2.5rem;
+                    }
+                    video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100vh;
+                        object-fit: cover;
+                    }
+                    &-pad {
+                        transition: padding 1s cubic-bezier(0.25, 0.1, 0.5, 1) .3s, height 0.7s ease;
+                        height: 46.5rem;
+                        padding: 0 6rem;
+                        .main {
+                            &__video {
+                                &-container {
+                                    border-radius: 0 0 2.5rem 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__content {
+                    svg {
+                        display: inline;
+                        width: 26.4rem;
+                        height: auto;
+                        vertical-align: bottom;
+                    }
+                }
+                &__container {
+                    text-align: center;
+                    padding: 0 10.3rem;
+                }
+                &__title {
+                    display: inline;
+                    text-align: center;
+                    font-size: 4.8rem;
+                    line-height: 120%;
+                    margin-bottom: 1rem;
+                    color: var(--main-color-black);
+                    //span {
+                    //    background-image: conic-gradient(from 41.7deg at 54.28% 62.57%, #1D1D1F -87.71deg, #3D0F1A 17.41deg, #D0AA48 54.72deg, #1D1D1F 135.79deg, #1D1D1F 272.29deg, #3D0F1A 377.41deg);
+                    //    background-clip: text;
+                    //    -webkit-background-clip: text;
+                    //}
+                }
+                &__svg {
+                    display: inline-block;
+                    position: relative;
+                    max-width: 0;
+                    transition: 4.5s all;
+                    overflow: hidden;
+                    margin-bottom: -1.3rem;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        right: 0;
+                        width: 2.5rem;
+                        height: 100%;
+                        background: linear-gradient(270deg, rgba(255, 255, 255, 0.7) 6.12%, rgba(255, 255, 255, 0.0114) 43.29%, rgba(217, 217, 217, 0) 83.55%);
+                    }
+                    &-up {
+                        max-width: 100%;
+                    }
+                }
+                &__txt {
+                    color: var(--main-color-grey);
+                    font-size: 1.2rem;
+                    line-height: 120%;
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+                }
+                &__btn {
+                    display: inline-block;
+                    padding: .6rem 1.2rem;
+                    border-radius: 1.5rem;
+                    background-color: var(--main-color-one);
+                    transition: .3s all;
+                    color: var(--main-color-white);
+                    margin: 0 auto;
+                    &:hover {
+                        background-color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+        &__category {
+            background-color: var(--main-color-bg);
+            padding: 0 14.7rem;
+            padding-top: 4.5rem;
+            padding-bottom: 6rem;
+            //margin-bottom: 1rem;
+            .category {
+                &__top {
+                    text-align: center;
+                    &-title {
+                        display: inline;
+                        font-size: 3.2rem;
+                        margin-bottom: 1.7rem;
+                    }
+                    svg {
+                        display: inline;
+                        max-width: 12.5rem;
+                        height: auto;
+                        vertical-align: bottom;
+                    }
+                }
+                &__title {
+                    display: block;
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    font-size: 1.8rem;
+                    margin-bottom: 1.7rem;
+                    &.anima {
+                        &-active {
+
+                        }
+                    }
+                }
+                &__container {
+                    @include flexBetween();
+                    flex-wrap: wrap;
+                    gap: 1.2rem;
+                    margin-top: 4rem;
+                }
+                &__btn {
+                    display: inline-block;
+                    border-radius: 1.5rem;
+                    padding: .6rem 1.8rem;
+                    background-color: var(--main-color-one);
+                    transition: .3s all;
+                    font-size: .85rem;
+                    color: var(--main-color-white);
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: var(--main-color-two);
+                    }
+                }
+                &__item {
+                    width: 49%;
+                    min-height: 34rem;
+                    border-radius: .9rem;
+                    background-color: var(--main-color-white);
+                    overflow: hidden;
+                    @include flexBetween();
+                    flex-direction: column;
+                    padding-top: 4rem;
+                    img {
+                        display: block;
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    .content {
+                        text-align: center;
+                    }
+                    &:nth-child(3) {
+                        @include flexBetween();
+                        flex-direction: row;
+                        width: 100%;
+                        padding-left: 1.8rem;
+                        padding-right: 5.7rem;
+                        min-height: 25rem;
+                        padding-top: 0;
+                        .content {
+                            text-align: right;
+                        }
+                        img {
+                            width: 83%;
+                        }
+                    }
+                }
+            }
+        }
+        &__commerce {
+            position: relative;
+            background-color: var(--main-color-bg);
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            //margin-bottom: 1rem;
+            .commerce {
+                position: relative;
+                z-index: 1;
+                &__anima {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(360deg, #F5F5F7 0%, rgba(245, 245, 247, 0) 38.9%), linear-gradient(180deg, #F5F5F7 0%, rgba(245, 245, 247, 0) 39.63%);
+                    }
+                }
+                &__title {
+                    display: block;
+                    max-width: 60%;
+                    margin: 0 auto;
+                    font-size: 3.2rem;
+                    text-align: center;
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    margin-bottom: 2.5rem;
+                    svg {
+                        display: inline;
+                        vertical-align: bottom;
+                        max-width: 44.5rem;
+                        height: auto;
+                        margin: 0 auto;
+                        margin-bottom: -.2rem;
+                    }
+                }
+                &__item {
+                    position: relative;
+                    background-color: var(--main-color-white);
+                    border-radius: .9rem;
+                    padding: 1.6rem 1.8rem;
+                    padding-bottom: 0;
+                    max-width: 100%;
+                    &:hover {
+                        .commerce {
+                            &__pic {
+                                img {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+                &__pic {
+                    position: relative;
+                    height: 13.4rem;
+                    width: 100%;
+                    border-radius: .9rem .9rem 0 0;
+                    overflow: hidden;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transform: scale(1.1);
+                        transition: .3s all;
+                    }
+                }
+                &__content {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                &__name {
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    font-size: 1.2rem;
+                    line-height: 120%;
+                    margin-bottom: .7rem;
+                }
+                &__description {
+                    font-family: "SFProDisplay-R";
+                    color: var(--main-color-black);
+                    font-size: .7rem;
+                    margin-bottom: 1.2rem;
+                    opacity: .7;
+                }
+                &__square {
+                    font-family: "SFProDisplay-R";
+                    font-size: 1.25rem;
+                    color: var(--main-color-black);
+                    margin-bottom: .6rem;
+                }
+                &__price {
+                    font-family: "SFProDisplay-R";
+                    font-size: 1.8rem;
+                    color: var(--main-color-black);
+                    margin-bottom: 1.1rem;
+                }
+                &__more {
+                    @include flexCenter();
+                    gap: .8rem;
+                    margin-bottom: 1rem;
+                    font-family: "SFProDisplay-M";
+                    color: #707070;
+                    font-size: .7rem;
+                    span {
+                        &:first-child {
+                            color: var(--main-color-black);
+                        }
+                    }
+                }
+                &__btn {
+                    display: inline-block;
+                    background-color: var(--main-color-one);
+                    font-size: .6rem;
+                    padding: .2rem 1.7rem;
+                    border-radius: 1.5rem;
+                    color: var(--main-color-white);
+                    transition: .3s all;
+                    &:hover {
+                        background-color: var(--main-color-two);
+                    }
+                }
+                &__buttons {
+                    @include flexCenter();
+                    margin-top: 4.1rem;
+                    gap: 1rem;
+                    button {
+                        border: none;
+                        background: transparent;
+                        padding: 0;
+                        svg {
+                            display: block;
+                            max-width: 100%;
+                            height: auto;
+                            transition: .3s all;
+                            path {
+                                transition: .3s all;
+                            }
+                        }
+                        &:hover,
+                        &:focus {
+                            svg {
+                                transform: scale(1.1);
+                                path {
+                                    fill: var(--main-color-two);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__partner {
+            position: relative;
+            background-color: var(--main-color-bg);
+            padding: 5rem 0;
+            margin-bottom: 1rem;
+            .partner {
+                &__title {
+                    max-width: 60%;
+                    margin: 0 auto;
+                    margin-bottom: .6rem;
+                    svg {
+                        display: inline;
+                        max-width: 24rem;
+                        height: auto;
+                        vertical-align: bottom;
+                    }
+                }
+                &__subtitle {
+                    font-family: "SFProDisplay-R";
+                    font-size: 1rem;
+                    color: var(--main-color-one);
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                &__logo {
+                    position: relative;
+                    @include flexCenter();
+                    background-color: var(--main-color-white);
+                    width: 100%;
+                    height: 9.4rem;
+                    border-radius: .9rem;
+                    margin-bottom: 5rem;
+                    transition: .3s all;
+                    img {
+                        display: block;
+                        width: 100%;
+                        max-width: 10rem;
+                        max-height: 5rem;
+                        object-fit: contain;
+                    }
+                }
+                &__item {
+                    text-align: center;
+                    &:hover {
+                        .partner {
+                            &__logo {
+                                transform: translateY(-2rem);
+                            }
+                        }
+                    }
+                }
+                &__slider {
+                    width: 100%;
+                }
+                &__content {
+                    img {
+                        display: block;
+                        width: 3.9rem;
+                        height: 3.9rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0 auto;
+                        margin-bottom: .6rem;
+                    }
+                }
+                &__name {
+                    font-family: "SFProDisplay-M";
+                    color: var(--main-color-black);
+                    margin-bottom: .2rem;
+                    text-align: center;
+                }
+                &__subname {
+                    font-family: "SFProDisplay-M";
+                    color: var(--main-color-black);
+                    font-size: .7rem;
+                    margin-bottom: 1rem;
+                }
+                &__description {
+                    font-family: "SFProDisplay-R";
+                    color: var(--main-color-black);
+                    font-size: .8rem;
+                    line-height: 150%;
+                    opacity: .7;
+                }
+                &__buttons {
+                    @include flexCenter();
+                    margin-top: 4.1rem;
+                    gap: 1rem;
+                    button {
+                        border: none;
+                        background: transparent;
+                        padding: 0;
+                        svg {
+                            display: block;
+                            max-width: 100%;
+                            height: auto;
+                            transition: .3s all;
+                        }
+                        &:hover,
+                        &:focus {
+                            svg {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__prices {
+            position: relative;
+            padding: 5rem 16rem;
+            background-color: var(--main-color-bg);
+            margin-bottom: 1rem;
+            .prices {
+                &__title {
+                    display: block;
+                    max-width: 80%;
+                    margin: 0 auto;
+                    font-size: 3.2rem;
+                    text-align: center;
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    margin-bottom: 2.5rem;
+                    svg {
+                        display: block;
+                        max-width: 21.5rem;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+                &__container {
+                    @include flexStart();
+                    flex-wrap: wrap;
+                    gap: 2.6rem;
+                }
+                &__item {
+                    position: relative;
+                    background-color: var(--main-color-white);
+                    border-radius: .9rem;
+                    padding: 1.6rem 1.8rem;
+                    padding-top: 0;
+                    max-width: 30.5%;
+                    transition: .2s all;
+                    &:hover {
+                        background-color: var(--main-color-one);
+                        .prices {
+                            &__name {
+                                color: var(--main-color-white);
+                            }
+                            &__description {
+                                color: var(--main-color-white);
+                            }
+                            &__square {
+                                color: var(--main-color-white);
+                            }
+                            &__price {
+                                color: var(--main-color-white);
+                            }
+                            &__btn {
+                                background-color: var(--main-color-two);
+                            }
+                        }
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 13.4rem;
+                        border-radius: 0 0 .9rem .9rem;
+                        object-fit: cover;
+                        margin-bottom: 1rem;
+                    }
+                }
+                &__content {
+                    text-align: center;
+                }
+                &__name {
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    font-size: 1.2rem;
+                    line-height: 120%;
+                    margin-bottom: .7rem;
+                    transition: .3s all;
+                }
+                &__description {
+                    font-family: "SFProDisplay-R";
+                    color: var(--main-color-black);
+                    font-size: .7rem;
+                    margin-bottom: 1.2rem;
+                    opacity: .7;
+                    transition: .3s all;
+                }
+                &__square {
+                    font-family: "SFProDisplay-R";
+                    font-size: 1.25rem;
+                    color: var(--main-color-black);
+                    margin-bottom: .6rem;
+                    transition: .3s all;
+                }
+                &__price {
+                    font-family: "SFProDisplay-R";
+                    font-size: 1.8rem;
+                    color: var(--main-color-black);
+                    margin-bottom: 1.1rem;
+                    transition: .3s all;
+                }
+                &__btn {
+                    display: inline-block;
+                    background-color: var(--main-color-one);
+                    font-size: .6rem;
+                    padding: .2rem 1.7rem;
+                    border-radius: 1.5rem;
+                    color: var(--main-color-white);
+                    transition: .3s all;
+                    &:hover {
+                        background-color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+        &__feedback {
+            padding: 0 12rem;
+            margin-bottom: 1rem;
+            .feedback {
+                background-image: url(../img/bg/bg-feedback.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-color: var(--main-color-bg);
+                padding: 1.35rem 3rem;
+                border-radius: .9rem;
+                @include flexBetween();
+                gap: 6rem;
+                &__title {
+                    @include flexStart();
+                    align-items: flex-end;
+                    font-family: "SFProDisplay-B";
+                    color: var(--main-color-black);
+                    font-size: 2.1rem;
+                    margin-bottom: .4rem;
+                    svg {
+                        display: inline;
+                        max-width: 8rem;
+                        height: auto;
+                    }
+                }
+                &__description {
+                    font-family: "SFProDisplay-M";
+                    color: var(--main-color-black);
+                    font-size: .7rem;
+                    opacity: .7;
+                    margin-bottom: 2.1rem;
+                }
+                &__form {
+                    @include flexStart();
+                    gap: .7rem;
+                    label {
+                        position: relative;
+                        width: 100%;
+                        input {
+                            display: block;
+                            font-size: .7rem;
+                            font-family: "SFProDisplay-M";
+                            color: var(--main-color-black);
+                            padding: .8rem 1.2rem;
+                            border-radius: 1.5rem;
+                            width: 100%;
+                            border: 1px solid transparent;
+                            transition: .3s all;
+                            &:focus,
+                            &:hover {
+                                border-color: var(--main-color-two);
+                            }
+                        }
+                    }
+                    button {
+                        font-family: "SFProDisplay-M";
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        background-color: var(--main-color-two);
+                        color: var(--main-color-white);
+                        padding: .8rem 2rem;
+                        font-size: .7rem;
+                        border-radius: 1.5rem;
+                        border: none;
+                        transition: .3s all;
+                        &:hover {
+                            background-color: var(--main-color-one);
+                        }
+                    }
+                }
+                &__bg {
+                    position: relative;
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    margin-right: 3rem;
+                    max-height: 17.75rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+}
+
+@import "blocks/footer";
+
+@import "blocks/popups";
+
+@import "basic/general";
+@import "basic/media";

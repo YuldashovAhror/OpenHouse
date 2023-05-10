@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'SFProDisplay-B';
+    src: url('../css/font/SFProDisplay/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+    url('../css/font/SFProDisplay/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/SFProDisplay/SFProDisplay-Bold.woff2') format('woff2'),
+    url('../css/font/SFProDisplay/SFProDisplay-Bold.woff') format('woff'),
+    url('../css/font/SFProDisplay/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay-SM';
+    src: url('../css/font/SFProDisplay/SFProDisplay-Semibold.eot');
+    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+    url('../css/font/SFProDisplay/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/SFProDisplay/SFProDisplay-Semibold.woff2') format('woff2'),
+    url('../css/font/SFProDisplay/SFProDisplay-Semibold.woff') format('woff'),
+    url('../css/font/SFProDisplay/SFProDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay-R';
+    src: url('../css/font/SFProDisplay/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+    url('../css/font/SFProDisplay/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/SFProDisplay/SFProDisplay-Regular.woff2') format('woff2'),
+    url('../css/font/SFProDisplay/SFProDisplay-Regular.woff') format('woff'),
+    url('../css/font/SFProDisplay/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplay-M';
+    src: url('../css/font/SFProDisplay/SFProDisplay-Medium.eot');
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+    url('../css/font/SFProDisplay/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/SFProDisplay/SFProDisplay-Medium.woff2') format('woff2'),
+    url('../css/font/SFProDisplay/SFProDisplay-Medium.woff') format('woff'),
+    url('../css/font/SFProDisplay/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

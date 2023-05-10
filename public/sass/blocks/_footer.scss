@@ -1,0 +1,136 @@
+//begin footer
+.footer {
+    position: relative;
+    margin-top: 1rem;
+    padding: 3.5rem 12rem;
+    padding-top: 5rem;
+    background-color: var(--main-color-bg);
+    &__container {
+        @include flexBetween();
+        align-content: flex-start;
+        gap: 7.1rem;
+        margin-bottom: 3.15rem;
+    }
+    &__column {
+        .logo {
+            display: block;
+            height: 5rem;
+            margin-bottom: 5rem;
+            margin-left: 1.5rem;
+            svg {
+                display: block;
+                height: 100%;
+                width: auto;
+            }
+        }
+        address {
+            margin-bottom: 6rem;
+            p {
+                width: 80%;
+                font-size: .8rem;
+            }
+        }
+        .messengers {
+            @include flexStart();
+            padding-left: 5rem;
+            gap: 6rem;
+            &__item {
+                @include flexStart();
+                cursor: pointer;
+                .pic {
+                    position: relative;
+                    width: 2rem;
+                    height: 2rem;
+                    @include flexCenter();
+                    border-radius: 50%;
+                    background-color: var(--main-color-one);
+                    transition: .3s all;
+                    margin-right: .8rem;
+                    svg {
+                        display: block;
+                        width: 100%;
+                        max-width: .9rem;
+                        height: auto;
+                    }
+                }
+                p {
+                    font-family: "SFProDisplay-R";
+                    font-size: .8rem;
+                    color: var(--main-color-three);
+                }
+                &:hover {
+                    .pic {
+                        background-color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+    }
+    &__txt {
+        font-family: "SFProDisplay-R";
+        color: var(--main-color-three);
+        font-size: .7rem;
+        line-height: 150%;
+    }
+    &__bottom {
+        @include flexBetween();
+        &-txt {
+            font-family: "SFProDisplay-R";
+            font-size: .7rem;
+            color: var(--main-color-three);
+        }
+    }
+}
+
+@media (max-width: 900.98px) {
+  .footer {
+      padding: 0 1.5rem;
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      &__container {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+      }
+      &__column {
+          .logo {
+              margin-left: 0;
+              height: 10rem;
+              margin-bottom: 3rem;
+          }
+          address {
+              p {
+                  font-size: 1rem;
+              }
+          }
+          .messengers {
+              padding-left: 0;
+              gap: 1.5rem;
+              &__item {
+                  .pic {
+                      width: 3rem;
+                      height: 3rem;
+                      margin-right: 1rem;
+                      svg {
+                          max-width: 1.5rem;
+                      }
+                  }
+                  p {
+                      font-size: 1.2rem;
+                  }
+              }
+          }
+      }
+      &__txt {
+          font-size: 1rem;
+      }
+      &__bottom {
+          flex-direction: row-reverse;
+          &-txt {
+              font-size: 1rem;
+          }
+      }
+  }
+}
+
+//end footer

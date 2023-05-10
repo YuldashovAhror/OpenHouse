@@ -1,0 +1,92 @@
+*, ::after, ::before {
+  box-sizing: border-box!important;
+}
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s){
+    @for $i from 1 through $delay_items {
+        &:nth-child(#{$i}) {
+            animation-delay: $delay_time * $i;
+        }
+    }
+}
+@keyframes letter-glow{
+    0%   {
+        opacity: 0;
+    }
+    66%  {
+        opacity: 1;
+    }
+    77%   {
+        opacity: 1;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.general {
+    &__container {
+        padding: 0 12.3rem;
+    }
+    &__top {
+        @include flexBetween();
+        h2 {
+            color: var(--main-color-black);
+            font-size: 2.4rem;
+        }
+        a {
+            font-size: .8rem;
+            border-radius: 1.4rem;
+            padding: .8rem 1.6rem;
+            background-color: rgba(7, 7, 7, 0.05);
+            transition: .3s all;
+            color: var(--main-color-black);
+            &:hover {
+                background-color: var(--main-color-black);
+                color: var(--main-color-white);
+            }
+        }
+    }
+    &__title {
+        font-family: "SFProDisplay-B";
+        font-size: 3.2rem;
+        line-height: 120%;
+        text-align: center;
+        color: var(--main-color-black);
+    }
+    &__txt {
+        &-anim {
+            span {
+                opacity: 0;
+            }
+            &.anim {
+                span {
+                    opacity: 1;
+                    animation: letter-glow 0.7s 0s ease both;
+                    @include nth-ani-delay(180, 0.05s);
+                }
+            }
+            &.anima {
+                &-active {
+                    span {
+                        opacity: 1;
+                        animation: letter-glow 0.7s 0s ease both;
+                        @include nth-ani-delay(180, 0.05s);
+                    }
+                }
+            }
+        }
+    }
+    &__subtitle {
+    }
+}
+@media (max-width: 900.98px) {
+    .general {
+        &__container {
+            padding: 0 2rem;
+        }
+        &__top {
+
+        }
+        &__title {
+        }
+    }
+}

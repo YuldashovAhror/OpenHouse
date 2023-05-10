@@ -1,0 +1,130 @@
+//begin header
+.header {
+    position: fixed;
+    top: -3.5rem;
+    left: 0;
+    width: 100%;
+    background: rgba(50, 12, 21, 0.8);
+    backdrop-filter: blur(25px);
+    padding: .8rem 12rem;
+    color: var(--main-color-white);
+    z-index: 99;
+    transition: .5s all;
+    overflow: hidden;
+    &__view {
+        top: 0;
+    }
+    &__container {
+        position: relative;
+        transition: .3s all;
+        @include flexBetween();
+    }
+    &__nav {
+        @include flexEnd();
+    }
+    &__links {
+        @include flexEnd();
+        margin-right: 5rem;
+        a {
+            position: relative;
+            display: block;
+            color: var(--main-color-white);
+            font-size: .7rem;
+            margin-right: 3rem;
+            &:last-child {
+                margin-right: 0;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 1.5rem;
+                    left: -1.4rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: var(--main-color-white);
+                    opacity: .1;
+                }
+            }
+        }
+    }
+    &__languages {
+        position: relative;
+        margin-right: 2.4rem;
+        &-list {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+    &__lang {
+        @include flexCenter();
+        font-size: .7rem;
+        color: var(--main-color-white);
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-left: .5rem;
+        }
+    }
+    &__calling {
+        @include flexEnd();
+        color: var(--main-color-white);
+        font-size: .9rem;
+        font-family: "SFProDisplay-B";
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-right: .6rem;
+        }
+    }
+    &__btn {
+        display: none;
+    }
+    .logo {
+        display: block;
+        width: 5rem;
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.menu {
+
+}
+
+@media (max-width: 900.98px) {
+    .header {
+        top: -6.8rem;
+        padding: 1.6rem 1.5rem;
+        &__view {
+            top: 0;
+        }
+        .logo {
+            width: 10rem;
+        }
+        &__btn {
+            display: block;
+            margin-right: 2rem;
+        }
+        &__links {
+            display: none;
+        }
+        &__lang {
+            font-size: 1.4rem;
+        }
+        &__calling {
+            span {
+                display: none;
+            }
+        }
+    }
+    .menu {
+
+    }
+}
+//end header
