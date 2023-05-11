@@ -16,7 +16,7 @@ services:
             - ./:/var/www
             - ./_docker/nginx/conf.d:/etc/nginx/conf.d
         ports:
-            - "8881:80"
+            - "8001:80"
         depends_on:
             - db
         container_name: openhouse_nginx

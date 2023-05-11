@@ -22,6 +22,9 @@ return new class extends Migration
             $table->text('discription_uz')->nullable();
             $table->text('discription_ru')->nullable();
             $table->text('discription_en')->nullable();
+            $table->text('type_uz')->nullable();
+            $table->text('type_ru')->nullable();
+            $table->text('type_en')->nullable();
             $table->string('size');
             $table->string('price')->nullable();
             $table->string('floor')->nullable();

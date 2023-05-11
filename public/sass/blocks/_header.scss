@@ -51,9 +51,16 @@
         position: relative;
         margin-right: 2.4rem;
         &-list {
-            opacity: 0;
-            visibility: hidden;
+            opacity: 1;
+            visibility: visible;
             position: absolute;
+            background-color: rgba(50, 12, 21, 0.8);
+        }
+        &:hover {
+            .header__languages-list {
+                opacity: 1;
+                visibility: visible
+            }
         }
     }
     &__lang {

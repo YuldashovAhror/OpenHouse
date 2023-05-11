@@ -30,7 +30,7 @@
                 <div class="main__container">
                     <div class="main__content">
                         <h1 class="main__title general__txt-anim">
-                            Коммерческие помещения в Ташкенте
+                            {{__('asd.Коммерческие помещения в Ташкенте')}}
                         </h1>
                         <div class="main__svg">
                             <svg viewBox="0 0 56 12" xmlns="http://www.w3.org/2000/svg">
@@ -53,11 +53,9 @@
                     </div>
                     <!-- /.main__content -->
                     <!-- /.main__title -->
-                    <p class="main__txt ">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
-                        Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                    <p class="main__txt ">{{__('asd.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.')}}</p>
                     <!-- /.main__txt -->
-                    <a href="" class="main__btn popup__btn" data-aos="fade-up" data-aos-duration="500">Узнать
-                        больше</a>
+                    <a href="" class="main__btn popup__btn" data-aos="fade-up" data-aos-duration="500">{{__('asd.Узнать больше')}}</a>
                     <!-- /.main__btn -->
                 </div>
                 <!-- /.main__container -->
@@ -68,7 +66,7 @@
         <section class="section__category">
             <div class="category__top" data-aos="fade-up" data-aos-easing="250">
                 <h2 class="category__top-title anima-blocks">
-                    Подберем лучшие предложения для вашего бизнеса
+                    {{__('asd.Подберем лучшие предложения для вашего бизнеса')}}
                 </h2>
                 <svg viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -83,7 +81,7 @@
                     </defs>
 
                     <text x="50%" y="9" text-anchor="middle" font-family="SFProDisplay-B" font-size="10"
-                        fill="url(#G)" class="svg__text">бизнеса</text>
+                        fill="url(#G)" class="svg__text">{{__('asd.бизнеса')}}</text>
                 </svg>
                 <!-- /.category__title -->
             </div>
@@ -91,9 +89,9 @@
             <div class="category__container">
                 <div class="category__item">
                     <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">Ресторан</h2>
+                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Ресторан')}}</h2>
                         <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">Узнать больше</a>
+                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
                         <!-- /.category__btn -->
                     </div>
                     <!-- /.content -->
@@ -103,9 +101,9 @@
                 <!-- /.category__item -->
                 <div class="category__item">
                     <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">Салон красоты</h2>
+                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Салон красоты')}}</h2>
                         <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">Узнать больше</a>
+                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
                         <!-- /.category__btn -->
                     </div>
                     <!-- /.content -->
@@ -117,9 +115,9 @@
                     <img src="/img/category/3.png" alt="" data-aos="fade-up" data-aos-delay="150"
                         data-aos-duration="1000">
                     <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">Магазин</h2>
+                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Магазин')}}</h2>
                         <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-left">Узнать больше</a>
+                        <a href="" class="category__btn popup__btn" data-aos="fade-left">{{__('asd.Узнать больше')}}</a>
                         <!-- /.category__btn -->
                     </div>
                     <!-- /.content -->
@@ -127,9 +125,9 @@
                 <!-- /.category__item -->
                 <div class="category__item">
                     <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">Офис</h2>
+                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Офис')}}</h2>
                         <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">Узнать больше</a>
+                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
                         <!-- /.category__btn -->
                     </div>
                     <!-- /.content -->
@@ -139,9 +137,9 @@
                 <!-- /.category__item -->
                 <div class="category__item">
                     <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">Салон красоты</h2>
+                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Салон красоты')}}</h2>
                         <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">Узнать больше</a>
+                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
                         <!-- /.category__btn -->
                     </div>
                     <!-- /.content -->
@@ -171,8 +169,8 @@
                         </defs>
 
                         <text x="50%" y="9" text-anchor="middle" font-family="SFProDisplay-B"
-                            font-size="10" fill="url(#G)">Коммерческие предложения</text>
-                    </svg>, которых нет в открытом доступе
+                            font-size="10" fill="url(#G)">{{__('asd.Коммерческие предложения')}}</text>
+                    </svg>, {{__('asd.которых нет в открытом доступе')}}
                 </h2>
                 <!-- /.general__title commerce__title -->
                 <div class="commerce__container" data-aos="fade-left" data-aos-duration="500">
@@ -186,21 +184,20 @@
                                         </h3>
                                         <!-- /.prices__name -->
                                         <p class="commerce__description">
-                                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                                            сосредоточиться
+                                            {!!$plan['discription_'.$lang]!!}
                                         </p>
                                         <!-- /.prices__description -->
-                                        <p class="commerce__square">44 m2</p>
+                                        <p class="commerce__square">{{$plan->size}}</p>
                                         <!-- /.prices__square -->
-                                        <p class="commerce__price">14 000 000 so’m</p>
+                                        <p class="commerce__price">{{$plan->price}}</p>
                                         <!-- /.prices__price -->
                                         <p class="commerce__more">
-                                            <span>Офис</span>
-                                            <span>44m2</span>
-                                            <span>2/2 Эт.</span>
+                                            <span>{{$plan['type_'.$lang]}}</span>
+                                            <span>{{$plan->size}}</span>
+                                            <span>{{$plan->floor}}</span>
                                         </p>
                                         <!-- /.commerce__more -->
-                                        <a href="" class="commerce__btn popup__btn">Подробнее</a>
+                                        <a href="" class="commerce__btn popup__btn">{{__('asd.Подробнее')}}</a>
                                         <!-- /.prices__btn -->
                                     </div>
                                     <!-- /.prices__content -->
@@ -257,38 +254,36 @@
                         </defs>
 
                         <text x="50%" y="9" text-anchor="middle" font-family="SFProDisplay-B"
-                            font-size="10" fill="url(#G)">Наши партнеры</text>
-                    </svg>, которые нам доверяют
+                            font-size="10" fill="url(#G)">{{__('asd.Наши партнеры')}}</text>
+                    </svg>, {{__('asd.которые нам доверяют')}}
                 </h2>
                 <!-- /.partner__title general__title -->
-                <p class="partner__subtitle" data-aos="fade-up">Oтзывы</p>
+                <p class="partner__subtitle" data-aos="fade-up">{{__('asd.Oтзывы')}}</p>
                 <!-- /.partner__subtitle -->
                 <div class="partner__container" data-aos="fade-up">
                     <div class="swiper partner__slider ">
                         <div class="swiper-wrapper">
-                            <?php for ($i = 1; $i <= 4; $i++):?>
+                            @foreach ($partners as $partner)
                             <div class="swiper-slide">
                                 <div class="partner__item">
                                     <div class="partner__logo">
-                                        <img src="<?php echo '/img/partner/' . $i . '.png'; ?>" alt="photo">
+                                        <img src="{{$partner->photo}}" alt="photo">
                                     </div>
                                     <!-- /.partner__logo -->
                                     <div class="partner__content">
-                                        <img src="<?php echo '/img/partner/' . $i . '.jpg'; ?>" alt="photo">
-                                        <h3 class="partner__name">jhon doe</h3>
+                                        <img src="{{$partner->people_photo}}" alt="photo">
+                                        <h3 class="partner__name">{{$partner['name_'.$lang]}}</h3>
                                         <!-- /.partner__name -->
-                                        <p class="partner__subname">CEO Cofounder</p>
+                                        <p class="partner__subname">{{$partner['position_'.$lang]}}</p>
                                         <!-- /.partner__subname -->
-                                        <p class="partner__description">“Давно выяснено, что при оценке дизайна и
-                                            композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому,
-                                            что тот обеспечивает более или менее стандартное заполнение шаблона”</p>
+                                        <p class="partner__description">{!!$partner['discription_'.$lang]!!}</p>
                                         <!-- /.partner__description -->
                                     </div>
                                     <!-- /.partner__content -->
                                 </div>
                                 <!-- /.yard__slider-photo -->
                             </div>
-                            <?php endfor ?>
+                            @endforeach
                         </div>
                     </div>
                     <div class="partner__buttons">
@@ -319,7 +314,7 @@
         <!-- /.section__partner -->
         <section class="section__prices">
             <div class="prices">
-                <h2 class="prices__title" data-aos="fade-up">Цены, которых вы не получите
+                <h2 class="prices__title" data-aos="fade-up">{{__('asd.Цены, которых вы не получите')}}
                     <svg viewBox="0 0 70 12" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="gr-1" spreadMethod="reflect">
@@ -333,34 +328,35 @@
                         </defs>
 
                         <text x="50%" y="9" text-anchor="middle" font-family="SFProDisplay-B"
-                            font-size="10" fill="url(#gr-1)">нигде больше.</text>
+                            font-size="10" fill="url(#gr-1)">{{__('asd.нигде больше.')}}</text>
                     </svg>
                 </h2>
                 <!-- /.prices__title -->
+                {{-- @dd($popular) --}}
                 <div class="prices__container">
-                    <?php for ($i = 1; $i <= 3; $i++):?>
+                    @foreach ($popular as $pop)
                     <div class="prices__item" data-aos="fade-up">
                         <img src="/img/bg/p-1.jpg" alt="" class="prices__pic">
                         <!-- /.prices__pic -->
                         <div class="prices__content">
-                            <h3 class="prices__name">Kоммерческие помещения
+                            <h3 class="prices__name">{{$pop->name_uz}}
                             </h3>
                             <!-- /.prices__name -->
                             <p class="prices__description">
-                                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться
+                                {{$pop->discription_uz}}
                             </p>
                             <!-- /.prices__description -->
-                            <p class="prices__square">44 m2</p>
+                            <p class="prices__square">{{$pop->size}}</p>
                             <!-- /.prices__square -->
-                            <p class="prices__price">14 000 000 so’m</p>
+                            <p class="prices__price">{{$pop->price}}</p>
                             <!-- /.prices__price -->
-                            <a href="" class="prices__btn popup__btn">Подробнее</a>
+                            <a href="" class="prices__btn popup__btn">{{__('asd.Подробнее')}}</a>
                             <!-- /.prices__btn -->
                         </div>
                         <!-- /.prices__content -->
                     </div>
                     <!-- /.prices__item -->
-                    <?php endfor ?>
+                    @endforeach
                 </div>
                 <!-- /.prices__container -->
             </div>
@@ -370,7 +366,7 @@
         <section class="section__feedback" id="feedback">
             <div class="feedback">
                 <div class="feedback__content" data-aos="fade-right">
-                    <h2 class="feedback__title general__title">Не знаете чего
+                    <h2 class="feedback__title general__title">{{__('asd.Не знаете чего')}}
                         <svg viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="G" spreadMethod="reflect">
@@ -384,11 +380,11 @@
                             </defs>
 
                             <text x="50%" y="9" text-anchor="middle" font-family="SFProDisplay-B"
-                                font-size="10" fill="url(#G)">хотите?</text>
+                                font-size="10" fill="url(#G)">{{__('asd.хотите?')}}</text>
                         </svg>
                     </h2>
                     <!-- /.feedback__title -->
-                    <p class="feedback__description">Найдем идеальное предложения под ваши запросы</p>
+                    <p class="feedback__description">{{__('asd.Найдем идеальное предложения под ваши запросы')}}</p>
                     <!-- /.feedback__description -->
                     <form action="" class="feedback__form">
                         <label for="form__name">
@@ -398,7 +394,7 @@
                             <input type="text" name="phone" type="tel" class="form__tel" required
                                 id="form__tel" placeholder="Номер телефона" pattern="^[0-9-+\s()]*$">
                         </label>
-                        <button type="submit">Отправить заявку</button>
+                        <button type="submit">{{__('asd.Отправить заявку')}}</button>
                     </form>
                     <!-- /.feedback__form -->
                 </div>

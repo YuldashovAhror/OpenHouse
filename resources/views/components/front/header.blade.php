@@ -92,28 +92,29 @@
             </div>
             <!-- /.header__btn -->
             <div class="header__links">
-                <a href="#commerce" class="header__link">Предложения</a>
+                <a href="#commerce" class="header__link">{{__('asd.Предложения')}}</a>
                 <!-- /.link -->
-                <a href="#partner" class="header__link">Партнёры</a>
+                <a href="#partner" class="header__link">{{__('asd.Партнёры')}}</a>
                 <!-- /.link -->
 
-                <a href="#feedback" class="header__link">Контакты</a>
+                <a href="#feedback" class="header__link">{{__('asd.Контакты')}}</a>
                 <!-- /.link -->
             </div>
             <!-- /.links -->
             <div class="header__languages">
-                <a href="" class="header__lang">
-                    <span>Ru</span>
+                <a class="header__lang">
+                    <span>@if($lang == 'uz') O’Z @elseif($lang == 'ru') РУ @elseif($lang == 'en') EN @endif</span>
                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 0.798828L5 4.79883L9 0.798828" stroke="white"/>
                     </svg>
                 </a>
                 <!-- /.header__lang -->
                 <div class="header__languages-list">
-                    <a href="" class="header__lang">En</a>
+                    @if($lang != 'ru')<a href="/languages/ru" class="header__lang">Ru</a>@endif
                     <!-- /.header__lang -->
-                    <a href="" class="header__lang">Ru</a>
+                    @if($lang != 'uz')<a href="/languages/uz" class="header__lang">Uz</a>@endif
                     <!-- /.header__lang -->
+                    @if($lang != 'en')<a href="/languages/en" class="header__lang">En</a>@endif
                 </div>
                 <!-- /.header__languages-list -->
             </div>

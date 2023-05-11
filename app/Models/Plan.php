@@ -19,6 +19,10 @@ class Plan extends Model
         'size',
         'price',
         'photo',
+        'floor',
         'popular',
+        'type_uz',
+        'type_ru',
+        'type_en',
     ];
 }

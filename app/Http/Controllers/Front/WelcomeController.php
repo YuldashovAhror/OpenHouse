@@ -12,9 +12,11 @@ class WelcomeController extends Controller
     {
         $plans = Plan::all();
         $partners = Partner::all();
+        $popular = Plan::where('popular', '1')->get();
         return view('welcome', [
             'plans'=>$plans,
             'partners'=>$partners,
+            'popular'=>$popular,
         ]);
     }
 }

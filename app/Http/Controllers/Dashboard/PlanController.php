@@ -47,7 +47,6 @@ class PlanController extends BaseController
 
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         if (!empty($request['photo'])){
             $this->fileDelete('\Plan', $id, 'photo');
             $request['photo'] = $this->photoSave($request['photo'], 'image/plan');

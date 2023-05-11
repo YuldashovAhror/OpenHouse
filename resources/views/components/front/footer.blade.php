@@ -92,16 +92,13 @@
                 </svg>
             </a>
             <!-- /.logo -->
-            <p class="footer__txt">Архитектура проекта, изображения благоустройства, фасадов, интерьера, применяемых
-                материалов, их нумерация, инфраструктура комплекса являются условными и могут быть изменены в ходе
-                проектирования, строительства и эксплуатации. </p>
+            <p class="footer__txt">{{__('asd.Архитектура проекта, изображения благоустройства, фасадов, интерьера, применяемых материалов, их нумерация, инфраструктура комплекса являются условными и могут быть изменены в ходе проектирования, строительства и эксплуатации.')}} </p>
             <!-- /.footer__txt -->
         </div>
         <!-- /.footer__column -->
         <div class="footer__column">
             <address>
-                <p class="footer__txt">7th floor, 1, Shakespeare Sarani Rd, AC Market, Park Street area, Kolkata, West
-                    Bengal 700071, India</p>
+                <p class="footer__txt">{{__('asd.7th floor, 1, Shakespeare Sarani Rd, AC Market, Park Street area, Kolkata, West Bengal 700071, India')}}</p>
                 <!-- /.footer__txt -->
             </address>
             <div class="messengers">
@@ -141,10 +138,10 @@
     <!-- /.footer__container -->
     <div class="footer__bottom">
         <a href="https://novastudio.uz" class="novas footer__bottom-txt">
-            created by NOVAS
+            {{__('asd.created by NOVAS')}}
         </a>
         <!-- /.novas -->
-        <p class="footer__bottom-txt">© OpenHouse 2023. Все права защищены</p>
+        <p class="footer__bottom-txt">{{__('asd.© OpenHouse 2023. Все права защищены')}}</p>
     </div>
     <!-- /.footer__bottom -->
 </footer>

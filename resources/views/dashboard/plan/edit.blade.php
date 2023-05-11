@@ -61,6 +61,22 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
+                                <label class="form-label" for="type_uz">Тип Uz</label>
+                                <input class="form-control" name="type_uz" id="type_uz" type="text" placeholder="..."  value="{{$plan->type_uz}}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="type_ru">Тип Ru</label>
+                                <input class="form-control" name="type_ru" id="type_ru" type="text" placeholder="..."  value="{{$plan->type_ru}}">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label" for="type_en">Тип En</label>
+                                <div class="input-group">
+                                    <input class="form-control" name="type_en" id="type_en" type="text" placeholder="..." value="{{$plan->type_en}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
                                 <label class="form-label" for="name_uz">Размер</label>
                                 <input class="form-control" name="size" id="size" type="text" placeholder="..." required="" value="{{$plan->size}}">
                             </div>
@@ -68,7 +84,11 @@
                                 <label class="form-label" for="price">Цена</label>
                                 <input class="form-control" name="price" id="price" type="text" placeholder="..." value="{{$plan->size}}">
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-3">
+                                <label class="form-label" for="floor">Floor</label>
+                                <input class="form-control" name="floor" id="floor" type="text" placeholder="..." value="{{$plan->floor}}">
+                            </div>
+                            <div class="col-md-1 mb-3">
                                 <label class="form-label" for="name_en">Популярный</label>
                                 <div class="input-group" style="font-size: 15px">
                                     <input type="checkbox" id="popular" name="popular" @if ($plan->popular != 0) checked @endif >

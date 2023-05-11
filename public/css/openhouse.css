@@ -167,6 +167,10 @@ address {
   .header__languages {
     position: relative;
     margin-right: 2.4rem; }
+    .header__languages:hover .header__languages-list {
+      opacity: 1;
+      visibility: visible;
+    }
     .header__languages-list {
       opacity: 0;
       visibility: hidden;
