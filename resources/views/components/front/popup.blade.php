@@ -19,10 +19,11 @@
         <h2 class="popup__title general-lackR">{{ __('asd.ОСТАВЬТЕ ЗАЯВКУ') }}</h2>
         <!-- /.popup__title general-lackR -->
         <form action="" class="popup__form">
-            <input type="text" placeholder="имя">
-            <input type="text" name="phone" type="tel" class="form__tel" required placeholder="+998"
-                pattern="^[0-9-+\s()]*$">
-            <button type="submit" class="general-lackR">{{ __('asd.оставить заявку') }}</button>
+            <input type="text" id="first_name" placeholder="имя">
+            <input type="text" name="phone" type="tel" id="phone" class="form__tel" required placeholder="+998"
+                pattern="^[0-9-+\s()]*$" required>
+                <input id="token" value="{{ csrf_token() }}" type="hidden" required>
+            <button id="button" onclick="send1()" type="button" class="general-lackR">{{ __('asd.оставить заявку') }}</button>
         </form>
         <!-- /.popup__form -->
         <p class="popup__txt general-lackR">

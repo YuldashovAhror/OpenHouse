@@ -393,8 +393,9 @@
                         <label for="form__tel">
                             <input type="text" name="phone" type="tel" class="form__tel" required
                                 id="form__tel" placeholder="Номер телефона" pattern="^[0-9-+\s()]*$">
+                                <input id="token" value="{{ csrf_token() }}" type="hidden" required>
                         </label>
-                        <button type="submit">{{__('asd.Отправить заявку')}}</button>
+                        <button id="button" onclick="send2()" type="button" >{{__('asd.Отправить заявку')}}</button>
                     </form>
                     <!-- /.feedback__form -->
                 </div>
@@ -411,6 +412,68 @@
 @endsection
 
 @section('script')
+
+<script>
+    function send1() {
+
+        let token = $("#token").val();
+        let name = $('#first_name').val();
+        let phone = $('#phone').val();
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/dashboard/feedback",
+            data: {
+                name: name,
+                phone: phone,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+        setTimeout(() => {
+            $('.popup').hide()
+            $('.popup__success').show()
+            $("#first_name").val('');
+            $("#phone").val('');
+        }, 1000)
+        setTimeout(() => {
+            $('.popup').show()
+            $('.popup__success').hide()
+            $('.feedback').hide()
+        }, 3000)
+    }
+</script>
+<script>
+    function send2() {
+
+        let token = $("#token").val();
+        let name = $('#form__name').val();
+        let phone = $('#form__tel').val();
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/dashboard/feedback",
+            data: {
+                name: name,
+                phone: phone,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+        // setTimeout(() => {
+        //     $('.popup').hide()
+        //     $('.popup__success').show()
+        //     $("#form__name").val('');
+        //     $("#form__tel").val('');
+        // }, 1000)
+        // setTimeout(() => {
+        //     $('.popup').show()
+        //     $('.popup__success').hide()
+        //     $('.feedback').hide()
+        // }, 3000)
+    }
+</script>
+
     <script src="/js/swiper.min.js"></script>
     <script src="/js/jquery.nicescroll.min.js"></script>
     <script src="/js/three.min.js"></script>

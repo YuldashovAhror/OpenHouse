@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Dashboard\FeedbackController as DashboardFeedbackController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\WordController;
+use App\Http\Controllers\Front\FeedbackController;
 use App\Http\Controllers\Front\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,5 +34,8 @@ Route::get('/dashboard', function () {
 Route::resource('dashboard/plan', PlanController::class);
 Route::resource('dashboard/partner', PartnerController::class);
 Route::get('dashboar/words', [WordController::class, 'index'])->name('words.index');
+Route::get('dashboard/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::get('dashboard/feedback', [DashboardFeedbackController::class, 'index'])->name('feedback.index');
+Route::delete('dashboard/feedback/{id}', [DashboardFeedbackController::class, 'destroy'])->name('feedback.destroy');
 
 require __DIR__.'/auth.php';
