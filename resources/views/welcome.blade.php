@@ -87,65 +87,20 @@
             </div>
             <!-- /.category__top -->
             <div class="category__container">
-                <div class="category__item">
-                    <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Ресторан')}}</h2>
-                        <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
-                        <!-- /.category__btn -->
+                @foreach ($builds as $build)
+                    <div class="category__item">
+                        <div class="content">
+                            <h2 class="category__title anima-blocks general__txt-anim">{{$build['name_'.$lang]}}</h2>
+                            <!-- /.category__title -->
+                            <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
+                            <!-- /.category__btn -->
+                        </div>
+                        <!-- /.content -->
+                        <img src="{{$build->photo}}" alt="" data-aos="fade-up" data-aos-delay="150"
+                            data-aos-duration="1000">
                     </div>
-                    <!-- /.content -->
-                    <img src="/img/category/1.png" alt="" data-aos="fade-up" data-aos-delay="150"
-                        data-aos-duration="1000">
-                </div>
+                @endforeach
                 <!-- /.category__item -->
-                <div class="category__item">
-                    <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Салон красоты')}}</h2>
-                        <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
-                        <!-- /.category__btn -->
-                    </div>
-                    <!-- /.content -->
-                    <img src="/img/category/2.png" alt="" data-aos="fade-up" data-aos-delay="350"
-                        data-aos-duration="1000">
-                </div>
-                <!-- /.category__item -->
-                <div class="category__item">
-                    <img src="/img/category/3.png" alt="" data-aos="fade-up" data-aos-delay="150"
-                        data-aos-duration="1000">
-                    <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Магазин')}}</h2>
-                        <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-left">{{__('asd.Узнать больше')}}</a>
-                        <!-- /.category__btn -->
-                    </div>
-                    <!-- /.content -->
-                </div>
-                <!-- /.category__item -->
-                <div class="category__item">
-                    <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Офис')}}</h2>
-                        <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
-                        <!-- /.category__btn -->
-                    </div>
-                    <!-- /.content -->
-                    <img src="/img/category/4.png" alt="" data-aos="fade-up" data-aos-delay="150"
-                        data-aos-duration="1000">
-                </div>
-                <!-- /.category__item -->
-                <div class="category__item">
-                    <div class="content">
-                        <h2 class="category__title anima-blocks general__txt-anim">{{__('asd.Салон красоты')}}</h2>
-                        <!-- /.category__title -->
-                        <a href="" class="category__btn popup__btn" data-aos="fade-up">{{__('asd.Узнать больше')}}</a>
-                        <!-- /.category__btn -->
-                    </div>
-                    <!-- /.content -->
-                    <img src="/img/category/5.png" alt="" data-aos="fade-up" data-aos-delay="350"
-                        data-aos-duration="1000">
-                </div>
                 <!-- /.category__item -->
             </div>
             <!-- /.category__container -->

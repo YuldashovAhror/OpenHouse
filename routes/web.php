@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\BuildController;
 use App\Http\Controllers\Dashboard\FeedbackController as DashboardFeedbackController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\PlanController;
@@ -33,6 +34,7 @@ Route::get('/dashboard', function () {
 
 Route::resource('dashboard/plan', PlanController::class);
 Route::resource('dashboard/partner', PartnerController::class);
+Route::resource('dashboard/build', BuildController::class);
 Route::get('dashboar/words', [WordController::class, 'index'])->name('words.index');
 Route::get('dashboard/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
 Route::get('dashboard/feedback', [DashboardFeedbackController::class, 'index'])->name('feedback.index');

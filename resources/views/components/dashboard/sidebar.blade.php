@@ -56,6 +56,12 @@
                     </a>
                 </li> --}}
                 <li>
+                    <a href="{{route('build.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Здание</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('feedback.index')}}">
                         <i class="uil-star"></i>
                         <span>Обратная связь</span>

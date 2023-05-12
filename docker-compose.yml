@@ -29,7 +29,7 @@ services:
             MYSQL_DATABASE: openhouse
             MYSQL_ROOT_PASSWORD: root
         ports:
-            - "8105:3306"
+            - "8005:3306"
 
     phpmyadmin:
         container_name: openhouse_phpmyadmin
